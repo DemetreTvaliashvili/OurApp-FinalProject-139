@@ -1,0 +1,92 @@
+/* ----- PAGE COLORS ----- */
+:root {
+  --white: #ffffff;
+  --pink: #ff4363;
+}
+body {
+  font-size: 18px;
+}
+.main-container {
+  max-width: 1680px;
+  margin: 0 auto;
+
+  position: relative;
+  color: var(--white);
+}
+/* ----- HEADER STYLES ----- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+
+  padding: 21px 120px;
+}
+.main-nav {
+  display: flex;
+  gap: 16px;
+}
+.main-nav a {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.bg-pink {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+/* ----- HOME STYLES ----- */
+
+#home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.left-side {
+  max-width: 613px;
+  margin-top: 160px;
+  margin-left: 120px;
+}
+.home-banner {
+  transform: rotate(-8deg);
+  width: 861px;
+  margin-top: -63px;
+}
+h1 {
+  font-size: 82px;
+  font-weight: bold;
+}
+.home-p {
+  margin: 31px 0;
+}
+.btn {
+  border: 1px solid transparent;
+  border-radius: 35px;
+
+  /* width: 200px; */
+  font-size: 24px;
+  padding: 18px 22px;
+}
+.btn-white {
+  background-color: var(--white);
+  color: var(--pink);
+}
+.btn-pink {
+  background-color: var(--pink);
+  color: var(--white);
+}
+.play-btn {
+  color: var(--white);
+}
+.btn-white:hover {
+  transition: all 1s;
+  background-color: var(--pink);
+  color: var(--white);
+}
+.btn-pink:hover {
+  transition: all 1s;
+  background-color: var(--white);
+  color: var(--pink);
+}
