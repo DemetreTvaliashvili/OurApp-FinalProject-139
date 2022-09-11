@@ -52,7 +52,7 @@ header {
 .toggle-btn {
   position: absolute;
   top: 30px;
-  right: 120px;
+  right: 60px;
   -moz-outline-radius-topright: 20px;
   color: var(--white);
   font-size: 35px;
@@ -181,11 +181,15 @@ h3 {
   max-width: 589px;
   margin-right: 120px;
 }
+#design .right-side h2 {
+  margin-top: 25px;
+}
 #design .left-side {
   margin-left: -60px;
 }
 .design-list {
   margin: 37px 0 50px;
+  line-height: 30px;
 }
 .design-list li::before {
   content: '\2022';
@@ -258,6 +262,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   gap: 15px;
   margin-top: 120px;
   margin-bottom: 70px;
@@ -306,7 +311,9 @@ h3 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 100px auto;
+  margin: 100px 60px;
+}
+#contact p {
   max-width: 592px;
 }
 .form {
@@ -316,7 +323,12 @@ h3 {
 }
 #message {
   grid-area: message;
-  color: var(--gray);
+}
+label[for='name'] {
+  grid-area: name;
+}
+label[for='email'] {
+  grid-area: email;
 }
 input[name='email'],
 input[name='name'],
@@ -326,6 +338,7 @@ textarea {
   border-top: none;
   border-bottom: none;
   padding: 15px 32px;
+  width: 100%;
 }
 input:focus,
 textarea:focus {
@@ -338,6 +351,7 @@ textarea:focus {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 30px;
   align-items: center;
 }
 .socials {
@@ -355,16 +369,16 @@ small {
 
 @media screen and (max-width: 1560px) {
   #home {
-    align-items: center;
+    align-items: end;
   }
   #home .right-side {
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
     margin-right: 0;
     transform: rotate(0);
   }
   #why-us .card {
-    max-width: 320px;
+    max-width: 300px;
     padding: 48px 24px 32px;
   }
   #design .left-side {
@@ -373,8 +387,10 @@ small {
   #design .left-side > img {
     width: 400px;
   }
+  #features .right-side {
+    margin-right: 0;
+  }
   #features .right-side > img {
-    margin-right: 120px;
     width: 550px;
   }
   #q-a .right-side > img {
@@ -383,15 +399,93 @@ small {
   }
 }
 @media screen and (max-width: 1370px) {
+  .main-container {
+    max-width: 1250px;
+  }
+  .left-side {
+    margin-top: 80px;
+  }
+
   #home .right-side {
-    width: 680px;
+    display: none;
   }
   header {
     flex-direction: column;
     align-items: flex-start;
   }
+  #why-us {
+    margin-top: 160px;
+  }
+  #design {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #design .left-side,
+  #design .right-side {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+  #design .left-side {
+    display: none;
+  }
+  #design .right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #features {
+    margin-bottom: 58px;
+  }
+  #features .right-side {
+    margin-left: auto;
+  }
+  #features .right-side img {
+    width: 400px;
+  }
+  #next-way {
+    background-image: none;
+    background-color: var(--pink);
+    padding-top: 20px;
+  }
+  #next-way .left-side img {
+    width: 400px;
+  }
+  #next-way .right-side {
+    margin-left: auto;
+  }
+  #q-a .right-side {
+    margin-left: auto;
+    margin-top: 0;
+  }
+  #q-a .right-side > img {
+    width: 200px;
+  }
 }
-
+@media screen and (max-width: 1170px) {
+  h3 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+  h2 {
+    font-size: 52px;
+    line-height: 56px;
+  }
+  h1 {
+    font-size: 68px;
+    line-height: 72px;
+  }
+  #why-us .card {
+    max-width: 210px;
+    padding: 32px 14px 24px;
+  }
+  .card p {
+    font-size: 14px;
+  }
+  #design h2 {
+    text-align: center;
+  }
+}
 @media screen and (max-width: 960px) {
   .navigation {
     width: 100%;
@@ -409,5 +503,95 @@ small {
   .main-nav {
     flex-direction: column;
     align-items: flex-end;
+  }
+  .bg-pink {
+    display: none;
+  }
+  header,
+  #home {
+    padding-right: 60px;
+    padding-left: 60px;
+    background-color: var(--pink);
+  }
+  #home .left-side {
+    margin-left: 0;
+  }
+  #home {
+    padding-bottom: 30px;
+  }
+  #why-us {
+    flex-direction: column;
+    align-content: center;
+    gap: 32px;
+    margin: 60px;
+  }
+  #why-us .card {
+    max-width: 300px;
+  }
+  #features,
+  #q-a {
+    margin: 60px;
+  }
+  #features .left-side,
+  #q-a .left-side {
+    margin: 0;
+  }
+  #next-way {
+    padding-left: 60px;
+  }
+  #statistics {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: max-content max-content;
+    gap: 60px;
+    padding: 60px;
+  }
+  #footer {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 48px;
+    line-height: 1.2em;
+  }
+  h2 {
+    font-size: 36px;
+    line-height: 1.2em;
+  }
+  h3 {
+    font-size: 22px;
+    line-height: 1.2em;
+  }
+  .stat-num {
+    font-size: 42px;
+  }
+  .btn {
+    font-size: 18px;
+  }
+  .form {
+    grid-template-areas: 'name name' 'email email' 'message message';
+  }
+  .btn-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .fa-brands {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 576px) {
+  #features .right-side > img,
+  #next-way .left-side > img {
+    width: 250px;
+  }
+  img[alt='logo'] {
+    height: 45px;
+  }
+  #statistics {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, 1fr);
+  }
+  #footer {
+    padding: 40px 60px;
   }
 }
