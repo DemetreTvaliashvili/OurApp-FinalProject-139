@@ -5,6 +5,7 @@
   --white: #ffffff;
   --black: #000000;
   --pink: #ff4363;
+  --light-pink: #ff7588;
 }
 body {
   font-size: 18px;
@@ -22,6 +23,9 @@ h2 {
   line-height: 72px;
   font-weight: bold;
   color: var(--black);
+}
+p {
+  line-height: 30px;
 }
 /* ----- HEADER STYLES ----- */
 header {
@@ -144,6 +148,10 @@ h3 {
 }
 #design .right-side {
   max-width: 589px;
+  margin-right: 120px;
+}
+#design .left-side {
+  margin-left: -60px;
 }
 .design-list {
   margin: 37px 0 50px;
@@ -185,6 +193,106 @@ h3 {
   grid-column: 1/3;
   font-size: 16px;
 }
-#features .right-side img {
+#features .right-side {
+  margin-right: -120px;
+}
+/* ----- NEXT-WAY STYLES ----- */
+#next-way {
+  background-image: url('../images/next-way-bg.svg');
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-bottom: 70px;
+}
+#next-way .right-side {
+  max-width: 589px;
+  margin-right: 120px;
+}
+#next-way p,
+#next-way h2 {
+  color: var(--white);
+  margin-bottom: 50px;
+}
+#next-way img {
+  margin-top: -240px;
+  margin-left: -120px;
+}
+/* ----- Q-A STYLES ----- */
+#q-a {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 120px;
+  margin-bottom: 70px;
+}
+#q-a .left-side {
+  margin-top: 0;
+}
+#q-a .right-side {
+  margin-top: 60px;
+}
+.qustions-box {
+  margin-top: 43px;
+}
+#q-a h2 {
+  margin: 31px 0;
+}
+#q-a h3 {
+  color: var(--light-pink);
+  margin-bottom: 14px;
+}
+/* ----- STATISTICS STYLES ----- */
+#statistics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+  background-color: var(--pink);
+  padding: 100px;
+}
+.stat-item {
+  color: var(--white);
+  text-align: center;
+}
+.stat-num {
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 48px;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+/* ----- CONTACT-US STYLES ----- */
+#contact {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 100px auto;
+  max-width: 592px;
+}
+/* ----- FOOTER STYLES ----- */
+#footer {
+  background-color: var(--black);
+  padding: 70px 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.socials {
+  display: flex;
+  gap: 18px;
+}
+.fa-brands {
+  font-size: 48px;
+  color: var(--white);
+}
+small {
+  color: var(--white);
 }
