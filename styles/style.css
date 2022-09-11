@@ -6,10 +6,12 @@
   --black: #000000;
   --pink: #ff4363;
   --light-pink: #ff7588;
+  --transparent-pink: #f494a16a;
 }
 body {
   font-size: 18px;
   background: var(--main-bg);
+  font-family: 'Poppins', sans-serif;
 }
 .main-container {
   max-width: 1680px;
@@ -23,6 +25,7 @@ h2 {
   line-height: 72px;
   font-weight: bold;
   color: var(--black);
+  font-family: 'Roboto', sans-serif;
 }
 p {
   line-height: 30px;
@@ -35,6 +38,7 @@ header {
   gap: 30px;
 
   padding: 21px 120px;
+  position: relative;
 }
 .main-nav {
   display: flex;
@@ -44,6 +48,15 @@ header {
   text-transform: uppercase;
   font-weight: 600;
   color: var(--white);
+}
+.toggle-btn {
+  position: absolute;
+  top: 30px;
+  right: 120px;
+  -moz-outline-radius-topright: 20px;
+  color: var(--white);
+  font-size: 35px;
+  display: none;
 }
 .bg-pink {
   width: 100%;
@@ -72,46 +85,49 @@ header {
   height: 861px;
   width: 861px;
   transform: rotate(-8deg);
-  padding-right: 0px;
+  margin-right: -60px;
   margin-top: -62px;
 }
-/* .home-banner {
-  transform: rotate(-8deg);
-  width: 861px;
-  margin-top: -63px;
-} */
 h1 {
   font-size: 82px;
   font-weight: bold;
+  font-family: 'Roboto', sans-serif;
 }
 .home-p {
   margin: 31px 0;
+}
+.btn-container {
+  display: flex;
+  gap: 15px;
 }
 .btn {
   border: 1px solid transparent;
   border-radius: 35px;
   font-size: 24px;
   padding: 18px 22px;
+  font-family: 'Poppins', sans-serif;
 }
 .btn-white {
   background-color: var(--white);
   color: var(--pink);
+  transition: all 1s ease;
 }
 .btn-pink {
   background-color: var(--pink);
   color: var(--white);
+  transition: all 1s ease;
 }
 .play-btn {
   color: var(--white);
 }
 .btn-white:hover {
-  transition: all 1s;
   background-color: var(--pink);
+  border: 1px solid var(--white);
   color: var(--white);
 }
 .btn-pink:hover {
-  transition: all 1s;
   background-color: var(--white);
+  border: 1px solid var(--white);
   color: var(--pink);
 }
 /* ----- WHY-US STYLES ----- */
@@ -119,7 +135,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 15px;
   margin: 120px;
 }
 .card {
@@ -133,10 +149,24 @@ h1 {
   /* cursor: pointer; */
   padding: 70px 48px 32px;
 }
+.card {
+  cursor: pointer;
+  transition: 0.5s all linear;
+}
+.card:hover {
+  transform: scale(1.15);
+}
+.card img {
+  transition: 0.5s all ease-in;
+}
+.card img:hover {
+  transform: rotateY(0.5turn);
+}
 h3 {
   color: var(--black);
   font-size: 24px;
   font-weight: 600;
+  font-family: 'Roboto', sans-serif;
 }
 /* ----- DESIGN STYLES ----- */
 #design {
@@ -144,6 +174,7 @@ h3 {
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
+  align-items: center;
   color: var(--black);
 }
 #design .right-side {
@@ -172,6 +203,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   gap: 15px;
   margin: 120px 0 120px;
 }
@@ -277,16 +309,40 @@ h3 {
   margin: 100px auto;
   max-width: 592px;
 }
+.form {
+  display: grid;
+  grid-template-areas: 'name email' 'message message';
+  gap: 20px;
+}
+#message {
+  grid-area: message;
+  color: var(--gray);
+}
+input[name='email'],
+input[name='name'],
+textarea {
+  background-color: var(--transparent-pink);
+  border: 4px solid var(--pink);
+  border-top: none;
+  border-bottom: none;
+  padding: 15px 32px;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+}
 /* ----- FOOTER STYLES ----- */
 #footer {
   background-color: var(--black);
   padding: 70px 120px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
 .socials {
   display: flex;
+  flex-wrap: wrap;
   gap: 18px;
 }
 .fa-brands {
@@ -295,4 +351,63 @@ h3 {
 }
 small {
   color: var(--white);
+}
+
+@media screen and (max-width: 1560px) {
+  #home {
+    align-items: center;
+  }
+  #home .right-side {
+    width: 400px;
+    height: 400px;
+    margin-right: 0;
+    transform: rotate(0);
+  }
+  #why-us .card {
+    max-width: 320px;
+    padding: 48px 24px 32px;
+  }
+  #design .left-side {
+    margin-left: 120px;
+  }
+  #design .left-side > img {
+    width: 400px;
+  }
+  #features .right-side > img {
+    margin-right: 120px;
+    width: 550px;
+  }
+  #q-a .right-side > img {
+    width: 300px;
+    margin-right: 60px;
+  }
+}
+@media screen and (max-width: 1370px) {
+  #home .right-side {
+    width: 680px;
+  }
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .navigation {
+    width: 100%;
+    display: none;
+  }
+  .toggle-btn {
+    display: block;
+    cursor: pointer;
+  }
+  .navigation.active {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .main-nav {
+    flex-direction: column;
+    align-items: flex-end;
+  }
 }

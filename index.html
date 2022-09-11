@@ -4,6 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Dedicated page for OurApp application">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Demetre Tvaliashvili">
+    <meta property="og:title" content="OurApp mobile Application" />
+    <meta property="og:description" content="Use OurApp to get featured & secured digital products" />
+    <meta property="og:image"
+        content="https://2ddsno37bo3m3m7a13491sdn-wpengine.netdna-ssl.com/wp-content/uploads/2020/07/path24.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OurApp</title>
     <link rel="stylesheet" href="styles/reset.css">
@@ -11,26 +18,33 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="main-container">
         <img class="bg-pink" src="images/background-home.svg" alt="">
         <header>
-            <a href="#"><img src="images/logo.svg" alt="logo"></a>
-            <nav>
+            <a href="index.html"><img src="images/logo.svg" alt="logo"></a>
+            <nav class="navigation" id="nav">
                 <ul class="main-nav">
-                    <li><a href="">home</a></li>
-                    <li><a href="">why us</a></li>
-                    <li><a href="">design</a></li>
-                    <li><a href="">features</a></li>
-                    <li><a href="">next way</a></li>
-                    <li><a href="">q&a</a></li>
-                    <li><a href="">statistics</a></li>
-                    <li><a href="">contact us</a></li>
-                    <!-- <li><a href="">social media</a></li> -->
+                    <!-- <li><a href="#home">home</a></li> -->
+                    <li><a href="#why-us">why us</a></li>
+                    <li><a href="#design">design</a></li>
+                    <li><a href="#features">features</a></li>
+                    <li><a href="#next-way">next way</a></li>
+                    <li><a href="#q-a">q&a</a></li>
+                    <li><a href="#statistics">statistics</a></li>
+                    <li><a href="#contact-us">contact us</a></li>
                 </ul>
             </nav>
+            <div class="toggle-btn" id="burger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </header>
         <section id="home">
             <div class="left-side">
@@ -39,7 +53,7 @@
                     roots in a piece of classical Latin literature from BC, making it over
                     2000 years old. Richard McClintock.
                 </p>
-                <div>
+                <div class="btn-container">
                     <button class="btn btn-white">Download App</button>
                     <button class="btn btn-pink"><span class="play-btn">&#9658;</span> Watch Video</button>
                 </div>
@@ -177,7 +191,16 @@
             <h2>Still Not Lucky?</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard.</p>
-            <button class="btn btn-pink">Contact Us</button>
+            <form class="form">
+                <label for="name">
+                    <input type="text" name="name" placeholder="Full Name">
+                </label>
+                <label for="email">
+                    <input type="email" name="email" placeholder="Email Address" required>
+                </label>
+                <textarea id="message" name="message" rows="10" cols="30" placeholder="Message"></textarea>
+            </form>
+            <button class="btn btn-pink">Send Message</button>
         </section>
         <footer id="footer">
 
